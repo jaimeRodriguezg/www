@@ -1,2 +1,4 @@
 /node_modules
 /crud-graphql/node_modules
+/apollo/node_modules
+/apollo/db/node_modules
