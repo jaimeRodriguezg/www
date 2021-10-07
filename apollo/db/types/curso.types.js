@@ -22,7 +22,7 @@ module.exports = `
     extend type Mutation {
         addCurso(input: CursoInput): Curso
         updateCurso(id: ID!, input: CursoInput):Curso
-        deleteCurso(id: ID!): Curso
+        deleteCurso(id: ID!): Alert
     }
 
 `
