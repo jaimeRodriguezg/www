@@ -9,6 +9,8 @@ const { merge } = require('lodash')
 const cursoTypeDefs = require('./types/curso.types.js')
 const cursoResolvers = require('./resolvers/curso.resolvers.js')
 
+const usuarioTypeDefs = require('./types/user.types')
+const usuarioResolvers = require('./resolvers/usuario.resolvers');
 
 mongoose.connect('mongodb+srv://admin:admin@cluster0.itt3a.mongodb.net/test', {useNewUrlParser: true, useUnifiedTopology: true})
 
@@ -33,8 +35,8 @@ mongoose.connect('mongodb+srv://admin:admin@cluster0.itt3a.mongodb.net/test', {u
  const resolver = {}
 
  const schema = makeExecutableSchema ({
-     typeDefs: [typeDefs, cursoTypeDefs],
-     resolvers: merge(resolver, cursoResolvers)
+     typeDefs: [typeDefs, cursoTypeDefs, usuarioTypeDefs],
+     resolvers: merge(resolver, cursoResolvers, usuarioResolvers)
  })
 
 
